@@ -985,6 +985,7 @@ function emitRecord(rec, line, opts, stylize) {
             delete err.message;
             delete err.name;
             delete err.stack;
+            delete err.stackArray;
             // E.g. for extra 'foo' field on 'err', add 'err.foo' at
             // top-level. This *does* have the potential to stomp on a
             // literal 'err.foo' key.
