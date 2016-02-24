@@ -994,6 +994,10 @@ function emitRecord(rec, line, opts, stylize) {
             delete rec.err;
         }
 
+        if (rec.metadata) {
+            delete rec.metadata
+        }
+
         var leftover = Object.keys(rec);
         for (var i = 0; i < leftover.length; i++) {
             var key = leftover[i];
